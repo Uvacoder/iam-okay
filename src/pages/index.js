@@ -2,6 +2,8 @@ import React from "react"
 
 import randomCombo from 'random-a11y-combo'
 
+import WebFont from 'webfontloader';
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -23,6 +25,8 @@ const style = Object.assign({}, boxStyles, {
     backgroundColor,
     color
 })
+
+
 
 const IndexPage = () => (
     <Layout>

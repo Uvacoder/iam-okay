@@ -17,7 +17,8 @@
     "random-a11y-combo": "^1.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
