@@ -9,7 +9,7 @@ const defaultImage = 'https://screenshot-v2.now.sh/okay-beta-lake.now.sh/'
 const SEO = props => (
     <Helmet>
         <title>
-            {props.title ? `${props.title} - ${defaultTitle}` : defaultTitle}
+            {defaultTitle}
         </title>
         <meta
             name="description"
@@ -26,13 +26,11 @@ const SEO = props => (
             property="og:description"
             content={defaultDescription}
         />
+        <meta
+            property="og:image"
+            content={defaultImage}
+        />
 
-        {props.image ? (
-            <meta
-                property="og:image"
-                content={defaultImage}
-            />
-        ) : null}
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@iammatthias" />
@@ -44,12 +42,10 @@ const SEO = props => (
             name="twitter:description"
             content={defaultDescription}
         />
-        {props.image ? (
-            <meta
-                name="twitter:image"
-                content={defaultImage}
-            />
-        ) : null}
+        <meta
+            name="twitter:image"
+            content={defaultImage}
+        />
     </Helmet>
 )
 
