@@ -5,11 +5,17 @@ import randomCombo from 'random-a11y-combo'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
 const boxStyles = {
     height: '100vh',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: '32px'
+}
+
+const textStyle = {
+    fontSize: 'calc(18vw - 32px)'
 }
 
 const [backgroundColor, color] = randomCombo()
@@ -20,10 +26,11 @@ const style = Object.assign({}, boxStyles, {
 
 const IndexPage = () => (
     <Layout>
-        <SEO title="Okay, scrapbooker" />
+        <SEO title="Okay, Scrapbooker" />
 
-        <div style={style}>
-            <h1>Okay, scrapbooker</h1>
+        <div style={style} class="box">
+            <h1 style={textStyle}>Okay, Scrapbooker</h1>
+
         </div>
     </Layout>
 
