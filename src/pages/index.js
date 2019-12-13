@@ -27,19 +27,13 @@ const style = Object.assign({}, boxStyles, {
 })
 
 
-
 const IndexPage = () => (
     <Layout>
-        <SEO title="Okay, Scrapbooker" />
-
+        <SEO />
         <div style={style} class="box">
             <h1 style={textStyle}>Okay, Scrapbooker</h1>
-
         </div>
     </Layout>
-
-
 )
-
 
 export default IndexPage
