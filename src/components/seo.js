@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 const defaultTitle = 'Okay, Scrapbooker'
 const defaultDescription =
     'Okay. Okay. Okay. '
-const defaultImage = 'blob:https://zeit.co/35559f61-ece2-0b47-9e7a-1d28693839ba'
+const defaultImage = 'https://screenshot-v2.now.sh/okay-beta-lake.now.sh/'
 
 const SEO = props => (
     <Helmet>
