@@ -1,6 +1,7 @@
-const react = require('react')
+import React from 'react'
+import Layout from './src/components/Layout'
 
-exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
+export const onCreateWebpackConfig = ({ stage, actions, loaders }) => {
     if (stage === 'build-html') {
         actions.setWebpackConfig({
             module: {
@@ -13,4 +14,5 @@ exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
             }
         })
     }
+    return <Layout {...props}>{element}</Layout>
 }
