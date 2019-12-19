@@ -31,13 +31,12 @@ const Index = () => {
             }
         });
         console.log('choosed font: ', choosedFont);
-        document.querySelector("div").style.fontFamily = choosedFont
+        document.querySelector("h1").style.fontFamily = choosedFont
     }
 
     async function main() {
         fontsList = await loadFontsList();
         const choosedFont = loadRandomFont(fontsList);
-        document.querySelector("div").style.fontFamily = choosedFont
     }
 
     main();
