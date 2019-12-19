@@ -13,7 +13,7 @@ const Index = () => {
 
     async function loadFontsList() {
         try {
-            const result = await fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=' + API_KEY + '&display=swap');
+            const result = await fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=' + API_KEY);
             const data = await result.json();
             console.log('loaded google fonts list: ', data.items.length);
             return data.items;
@@ -27,7 +27,7 @@ const Index = () => {
         const choosedFont = fontsList[randomIndex].family;
         WebFont.load({
             google: {
-                families: [choosedFont]
+                families: [choosedFont + '&display=swap']
             }
         });
         console.log('choosed font: ', choosedFont);
