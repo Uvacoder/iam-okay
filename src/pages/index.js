@@ -13,7 +13,7 @@ const Index = () => {
 
     async function loadFontsList() {
         try {
-            const result = await fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=' + API_KEY);
+            const result = await fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=' + API_KEY + '&display=swap');
             const data = await result.json();
             console.log('loaded google fonts list: ', data.items.length);
             return data.items;
@@ -52,7 +52,7 @@ const Index = () => {
     }
 
     const textStyle = {
-        fontSize: 'calc(18vw - 64px)',
+        fontSize: 'calc(16vw - 32px)',
         fontFamily: 'inherit'
     }
 
@@ -66,7 +66,7 @@ const Index = () => {
         <Layout>
             <SEO />
             <div style={style} className="box">
-                <h1 style={textStyle}>Okay<br />Scrapbooker</h1>
+                <h1 style={textStyle}>Okay,<br />Scrapbooker</h1>
             </div>
         </Layout>
     )
