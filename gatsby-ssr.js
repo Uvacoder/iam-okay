@@ -1,4 +1,4 @@
-import React from 'react'
+const react = require('react')
 
 exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
     if (stage === 'build-html') {
