@@ -52,7 +52,7 @@ const Index = () => {
     }
 
     const textStyle = {
-        fontSize: 'calc(16vw - 32px)',
+        fontSize: 'calc(15vw - 32px)',
         fontFamily: 'inherit'
     }
 
