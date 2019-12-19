@@ -51,7 +51,7 @@ const boxStyles = {
 }
 
 const textStyle = {
-    fontSize: 'calc(18vw - 32px)',
+    fontSize: 'calc(18vw - 64px)',
     fontFamily: 'inherit'
 }
 
