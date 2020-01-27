@@ -6,6 +6,8 @@ import WebFont from 'webfontloader'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import FitText from '@kennethormandy/react-fittext'
+
 const Index = () => {
     const API_KEY = 'AIzaSyDDiO8nLVRMDaXwrJp61Cdcar5gFmmiR1Q';
 
@@ -31,7 +33,7 @@ const Index = () => {
             }
         });
         console.log('choosed font: ', choosedFont);
-        document.querySelector("h1").style.fontFamily = choosedFont
+        document.querySelector("p").style.fontFamily = choosedFont
     }
 
     async function main() {
@@ -47,12 +49,12 @@ const Index = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '32px'
+        padding: '32px',
     }
 
     const textStyle = {
-        fontSize: 'calc(10vw - 32px)',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        lineHeight: '1'
     }
 
     const [backgroundColor, color] = randomCombo()
@@ -65,7 +67,11 @@ const Index = () => {
         <Layout>
             <SEO />
             <div style={style} className="box">
-                <h1 style={textStyle}>Okay,<br />Scrapbooker</h1>
+                <FitText compressor={1}>
+                    <p style={textStyle}>
+                        Okay,<br />Scrapbooker
+                  </p>
+                </FitText>
             </div>
         </Layout>
     )
